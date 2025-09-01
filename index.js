@@ -45,8 +45,8 @@ const bookStore = {
 
 // Write your code here!
 
-//const bookStoreTitle = document.getElementById('header');
-//bookStoreTitle.textContent = bookStore.name;
+const bookStoreTitle = document.getElementById('header');
+bookStoreTitle.textContent = bookStore.name;
 
 const bookList = document.getElementById('book-list');
 const listOfBooks = bookStore.books;
@@ -62,3 +62,6 @@ listOfBooks.forEach((book) => {
     bookContainer.append(bookTitle, bookAuthor, bookImage);
     bookList.append(bookContainer);
 })
+
+const deleteMe = document.getElementById('delete-this');
+bookList.removeChild(deleteMe);
